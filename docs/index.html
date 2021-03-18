@@ -7,17 +7,34 @@
   <title>初心者向けホームページテンプレート tp_beginner6</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ここにサイト説明を入れます">
-  <link rel="stylesheet" href="css/destyle.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <!-- サイト共通のスタイル -->
+  <link rel="stylesheet" href="css/libs/destyle.css">
+  <link rel="stylesheet" href="css/layouts/layout.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/main.css">
+
+  <!-- ページ固有のスタイル -->
+  <link rel="stylesheet" href="css/pages/index.css">
 </head>
 
-<body>
+<body id="index">
 
   <header>
-    <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="DesignerKOKESHI"></a></h1>
+    <div id="logo"><img src="image/logo.svg" alt="DesignerKOKESHI"></a></h1>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner bgCarousel">
+        <div class="carousel-item bgCarousel__item active"></div>
+        <div class="carousel-item bgCarousel__item"></div>
+        <div class="carousel-item bgCarousel__item"></div>
+      </div>
+    </div>
     <nav id="menubar">
       <ul>
         <li><a href="#profile">Profile</a></li>
@@ -27,45 +44,84 @@
     </nav>
   </header>
 
-  <div id="container">
+  <main id="container">
 
+    <!-- ここからページ固有の内容 -->
     <div id="contents">
       <div id="profile">
+
         <h1>PROFILE</h1>
-        <img src="image.png" alt="Profile画像" title="Profile画像">
-        名前
-        あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
-        <a href="https://twitter.com/kokeshi2013"><img src="image/Twitter_icon.svg" alt="Twitter"></a>
-        <a href="https://www.facebook.com/kokeshi2013"><img src="image/Facebook_icon.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/kokeshi_2013"><img src="image/Instagram_icon.svg" alt="Instagram"></a>
-          <h2>できること</h2>
-          <img src="image.png" alt="Profile画像" title="Profile画像">
-          テキスト
-          <img src="image.png" alt="Profile画像" title="Profile画像">
-          テキスト
-          <img src="image.png" alt="Profile画像" title="Profile画像">
-          テキスト
-          <h2>挑戦していること</h2>
+        
+        <img src="image/profile.png" alt="Profile画像" title="Profile画像">
+        <div class="profile-item">
+          <p>長谷部 えり（こけし）</p>
+          <p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+        <div class="sns-item">
+          <a href="https://twitter.com/kokeshi2013"><img src="image/Twitter_icon.svg" alt="Twitter"></a>
+          <a href="https://www.facebook.com/kokeshi2013"><img src="image/Facebook_icon.svg" alt="Facebook"></a>
+          <a href="https://www.instagram.com/kokeshi_2013"><img src="image/Instagram_icon.svg" alt="Instagram"></a>
+        </div>
+        </div>
+
+        <h2>できること</h2>
+
+        <div class="contents-item">
+          <img src="image/imagesample.png" alt="Profile画像" title="Profile画像">
+          <p>テキスト</p>
+        </div>
+        <div class="contents-item">
+          <img src="image/imagesample.png" alt="Profile画像" title="Profile画像">
+          <p>テキスト</p>
+        </div>
+        <div class="contents-item">
+          <img src="image/imagesample.png" alt="Profile画像" title="Profile画像">
+          <p>テキスト</p>
+        </div>
+
+        <h2>挑戦していること</h2>
+        <div class="contents-item">
+          <img src="image/imagesample.png" alt="Profile画像" title="Profile画像">
+          <p>テキスト</p>
+        </div>
+        <div class="contents-item">
+          <img src="image/imagesample.png" alt="Profile画像" title="Profile画像">
+          <p>テキスト</p>
+        </div>
+        <div class="contents-item">
+          <img src="image/imagesample.png" alt="Profile画像" title="Profile画像">
+          <p>テキスト</p>
+        </div>
+
+
+
       </div>
       <div id="works">
         <h1>WORKS</h1>
-        <a href="sample2.html"><img src="next.png" alt="*****"></a>
-        <a href="sample2.html"><img src="next.png" alt="*****"></a>
-        <a href="sample2.html"><img src="next.png" alt="*****"></a>
+        <a href="sample2.html"><img src="image/imagesample.png" alt="*****"></a>
+        <a href="sample2.html"><img src="image/imagesample.png" alt="*****"></a>
+        <a href="sample2.html"><img src="image/imagesample.png" alt="*****"></a>
+        <a href="sample2.html"><img src="image/imagesample.png" alt="*****"></a>
       </div>
       <div id="contact">
         <h1>CONTACT</h1>
-        フォーム
+          <p>メールアドレス（必須）</p>
+          <input></input>
+          <p>お問い合わせ内容（必須）</p>
+          <textarea name="お問い合わせ内容" id="form" cols="30" rows="10"></textarea>
+          <p>※必須項目は必ずご入力ください</p>     
+          <input class="contact-submit" type="submit" value="送信する">
+        </div>
       </div>
-    
+
     </div>
-  </div>
+    <!-- ここまでページ固有の内容 -->
+  </main>
 
   <footer>
     <small>Copyright&copy; <a href="index.html">kokeshi</a> All Rights Reserved.</small>
   </footer>
 
-  <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+  <p class="nav-fix-pos-pagetop"><a href="トップへ戻る"><img src="image/back_top.svg"></a></p>
 
 </body>
 

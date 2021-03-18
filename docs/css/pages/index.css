@@ -1,0 +1,63 @@
+/* index.htmlページの中身のスタイル */
+
+
+body {
+    font-family: ‘Raleway’, ‘Noto Sans JP’, ‘ヒラギノ角ゴシック’, ‘メイリオ’ ,sans-serif;
+}
+
+#container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 44px;
+    margin-top: 120px;
+    margin-bottom: 84px;
+    padding: 30px;
+    border-bottom: 5px solid;
+}
+
+
+h2 {
+    font-size: 30px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+.contents-item {
+    display: inline-block;
+    font-size: 26px;
+}
+
+.profile-item {
+    width: 494px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.sns-item {
+    margin-top: 40px;
+}
+
+input , textarea {
+    border:0;
+    border-radius: 4px;
+    padding:10px;
+    font-size:1.3em;
+    font-family:Arial, sans-serif;
+    color:#aaa;
+    border:solid 1px #ccc;
+    margin:0 0 20px;
+    width:442px;
+}
+
+
+
+.contact-submit {
+    width: 380px;
+    height: 60px;
+    border-radius: 6px;
+
+
+}
