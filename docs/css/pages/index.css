@@ -1,22 +1,37 @@
 /* index.htmlページの中身のスタイル */
 
 
-body {
-    font-family: ‘Raleway’, ‘Noto Sans JP’, ‘ヒラギノ角ゴシック’, ‘メイリオ’ ,sans-serif;
+head a {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
+
 
 #container {
     text-align: center;
+    background-color: beige;
 }
+
+#contents {
+    max-width: 1024px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: gray;
+}
+
 
 h1 {
     font-size: 44px;
     margin-top: 120px;
     margin-bottom: 84px;
-    padding: 30px;
+    margin-left: 360px;
+    margin-right: 360px;
+    padding-bottom: 30px;
     border-bottom: 5px solid;
 }
-
 
 h2 {
     font-size: 30px;
@@ -40,24 +55,75 @@ h2 {
     margin-top: 40px;
 }
 
-input , textarea {
-    border:0;
-    border-radius: 4px;
-    padding:10px;
-    font-size:1.3em;
-    font-family:Arial, sans-serif;
-    color:#aaa;
-    border:solid 1px #ccc;
-    margin:0 0 20px;
-    width:442px;
+.sns-item > a {
+    margin-right: 24px;
+}
+
+.profile-name {
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.profile-item {
+    line-height: 32px;
+}
+
+.works-inner {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.works-inner > a {
+    margin-bottom: 24px;
+    width: 50%;
+}
+
+.works-inner > a:nth-child(odd) {
+    padding-right: 14px;
+}
+
+.works-inner > a:nth-child(even) {
+    padding-left: 14px;
+}
+
+.works-inner > a > img {
+    width: 100%;
 }
 
 
+.status-inner {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
 
-.contact-submit {
-    width: 380px;
-    height: 60px;
-    border-radius: 6px;
+
+.status-inner > img {
+    margin-bottom: 20px;
+    width: 33%;
+}
 
 
+.status-inner > img:nth-child(1) {
+    padding-right: 16px;
+}
+
+.status-inner > img:nth-child(2) {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.status-inner > img:nth-child(3) {
+    padding-left: 16px;
+}
+
+
+.status-inner > p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 33%;
+}
+
+
+.contact-innner {
+    padding-bottom: 100px;
 }

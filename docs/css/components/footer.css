@@ -1,1 +1,5 @@
 /* フッターのデザインを定義する */
+
+footer {
+    text-align: right;
+}

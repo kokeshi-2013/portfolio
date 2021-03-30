@@ -10,27 +10,6 @@ header nav {
   font-size: 2rem;
 }
 
-.bgCarousel {
-  height: 500px;
-  width: 100vw;
-}
-
-.bgCarousel__item {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.bgCarousel__item:nth-child(1) {
-  background-image: url(image/top01.png);
-}
-
-.bgCarousel__item:nth-child(2) {
-  background-image: url(image/top01.png);
-}
-
-.bgCarousel__item:nth-child(3) {
-  background-image: url(image/top01.png);
+#menu {
+  vertical-align: middle;
 }
