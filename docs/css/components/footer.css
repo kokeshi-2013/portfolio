@@ -1,5 +1,16 @@
 /* フッターのデザインを定義する */
 
 footer {
-    text-align: right;
+    height: 150px;
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+#page_top {
+    margin-left: 20px;
 }

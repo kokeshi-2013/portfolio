@@ -1,1 +1,40 @@
 /* works.htmlページの中身のスタイル */
+
+
+
+#works > #container > img{
+    max-width: 1024px;
+    width:100%
+}
+
+
+#container {
+    max-width: 1024px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.image-top {
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+
+.works-comment {
+    margin-bottom: 80px;
+    line-height: 30px;
+}
+
+#container > img {
+    margin-bottom: 30px;
+}
+

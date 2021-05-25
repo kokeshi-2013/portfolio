@@ -1,15 +1,59 @@
 /* フッターのデザインを定義する */
 
 header {
+  /* 相対位置指定(position: absolute)の親になる(という解釈でOK) */
+  position: relative;
   width: 100%;
-  height: 1024px;
   font-size: 2rem;
 }
 
-header nav {
-  font-size: 2rem;
-}
-
-#menu {
+header #menu {
+  padding-left: 20%;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform : translateY(-50%);
+  /* 重なり順の優先度を1にする。同じ子供同士で比較されるので.swiper-container(z-index:0)よりも上に表示される */
+  z-index: 1;
   vertical-align: middle;
+  font-size: 2rem;
+}
+
+header #menu ul {
+  margin-top: 50px;
+}
+
+header #menu li {
+  margin-bottom: 30px;
+}
+
+header .swiper-container {
+  /* z-indexがちゃんと動くにはpositionにrelativeとかabsoluteを指定する必要がある(調べれば出てくるはず) */
+  position: relative;
+  /* 重なり順の優先度を0にする */
+  z-index: 0; 
+  width: 100%;
+}
+
+header .swiper-container .swiper-slide img {
+  width: 100%;
+  /* heightが2つ指定してあるが、一番最後のやつが優先的に適用される（vhが使えないブラウザの場合は無視されてpxが適用されるように2つ指定しておく） */
+  height: 1024px;
+  /* vhはViewport(画面)の高さ基準。100vhで画面高さの100%って意味 */
+  height: 100vh; 
+  object-fit: cover;
+  /* object-fitのPolyfill https://github.com/fregante/object-fit-images */
+  font-family: 'object-fit: cover;';
+}
+
+#works > header {
+  width: 100%; /* 幅いっぱいを指定 */
+  height: 100px; /* 高さを指定 */
+  padding: 50px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  align-items: center; /* 中の要素を上下中央に並べる */
+  text-align: right;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>初心者向けホームページテンプレート tp_beginner6</title>
+  <title>こけしのポートフォリオサイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ここにサイト説明を入れます">
   <!--[if lt IE 9]>
@@ -18,14 +18,18 @@
   <link rel="stylesheet" href="css/components/header.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/main.css">
-  　
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  　
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Raleway:wght@900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 
   <!-- ページ固有のスタイル -->
   <link rel="stylesheet" href="css/pages/index.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@6.5.3/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@6.5.3/swiper-bundle.min.css">
+
+  <!-- object-fitのPolyfill https://github.com/fregante/object-fit-images -->
+  <script src="https://cdn.jsdelivr.net/npm/object-fit-images@3.2.4/dist/ofi.min.js"></script>
 </head>
 
 <body id="index">
@@ -40,6 +44,25 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/works_locariui.png"></div>
+        <div class="swiper-slide"><img src="image/works_room.png"></div>
+      </div>
+    </div>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        effect: 'fade',
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
 
   </header>
 
@@ -56,14 +79,24 @@
 
         <img src="image/profile.png" alt="Profile画像" title="Profile画像">
         <div class="profile-item">
-          <p class="profile-name">長谷部 えり（こけし）</p>
-          <p class="profile-comment">あだ名で「こけし」と呼んでいただいているデザイナーです。<BR>
+          <p class="profile-name">
+            長谷部 えり（こけし）
+          </p>
+          <p class="profile-comment">
+            あだ名で「こけし」と呼んでいただいているデザイナーです。<BR>
             主にスマートフォンアプリ、Webサービスのデザインをしています。<BR>
-            お酒は毎日飲みたい派です、よろしくお願いします！</p>
+            お酒は毎日飲みたい派です、よろしくお願いします！
+          </p>
           <div class="sns-item">
-            <a href="https://twitter.com/kokeshi2013"><img src="image/Twitter_icon.svg" alt="Twitter"></a>
-            <a href="https://www.facebook.com/kokeshi2013"><img src="image/Facebook_icon.svg" alt="Facebook"></a>
-            <a href="https://www.instagram.com/kokeshi_2013"><img src="image/Instagram_icon.svg" alt="Instagram"></a>
+            <a href="https://twitter.com/kokeshi2013">
+              <img src="image/Twitter_icon.svg" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/kokeshi2013">
+              <img src="image/Facebook_icon.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/kokeshi_2013">
+              <img src="image/Instagram_icon.svg" alt="Instagram">
+            </a>
           </div>
         </div>
 
@@ -94,13 +127,11 @@
       <div id="works">
         <h1>WORKS</h1>
         <div class="works-inner">
-          <a href="sample2.html"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E7%94%BB%E5%83%8F1"
+          <a href="works_room.html"><img src="image/works_room.png" alt="ROOM"></a>
+          <a href="works_locariui.html"><img src="image/works_locariui.png" alt="LOCARI UI"></a>
+          <a href="works.html"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E7%94%BB%E5%83%8F1"
               alt="*****"></a>
-          <a href="sample2.html"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E7%94%BB%E5%83%8F1"
-              alt="*****"></a>
-          <a href="sample2.html"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E7%94%BB%E5%83%8F1"
-              alt="*****"></a>
-          <a href="sample2.html"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E7%94%BB%E5%83%8F1"
+          <a href="works.html"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E7%94%BB%E5%83%8F1"
               alt="*****"></a>
         </div>
       </div>
@@ -117,12 +148,20 @@
     <!-- ここまでページ固有の内容 -->
   </main>
 
+
   <footer>
-    <small>Copyright&copy; <a href="index.html">kokeshi</a> All Rights Reserved.</small>
-    <p class="nav-fix-pos-pagetop"><a href="トップへ戻る"><img src="image/back_top.svg"></a></p>
+    <p>
+      <small>Copyright&copy; kokeshi All Rights Reserved.</small>
+    </p>
+    <div id="page_top"><a href="Works.html"><img src="image/back_top.svg"></a></div>
+
   </footer>
 
-
+  <script>
+    // object-fitのPolyfill
+    // https://github.com/fregante/object-fit-images
+    objectFitImages();
+  </script>
 
 </body>
 

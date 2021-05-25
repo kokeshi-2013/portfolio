@@ -9,21 +9,23 @@ head a {
 
 #container {
     text-align: center;
-    background-color: beige;
 }
+
 
 #contents {
     max-width: 1024px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: gray;
 }
 
 
 h1 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.06em;
     font-size: 44px;
     margin-top: 120px;
     margin-bottom: 84px;
@@ -33,16 +35,19 @@ h1 {
     border-bottom: 5px solid;
 }
 
+
 h2 {
     font-size: 30px;
     margin-top: 120px;
     margin-bottom: 40px;
 }
 
+
 .contents-item {
     display: inline-block;
     font-size: 26px;
 }
+
 
 .profile-item {
     width: 494px;
@@ -50,6 +55,7 @@ h2 {
     text-align: left;
     margin-left: 60px;
 }
+
 
 .sns-item {
     margin-top: 40px;
@@ -90,18 +96,15 @@ h2 {
     width: 100%;
 }
 
-
 .status-inner {
     display: inline-flex;
     flex-wrap: wrap;
 }
 
-
 .status-inner > img {
     margin-bottom: 20px;
     width: 33%;
 }
-
 
 .status-inner > img:nth-child(1) {
     padding-right: 16px;
@@ -116,13 +119,11 @@ h2 {
     padding-left: 16px;
 }
 
-
 .status-inner > p {
     font-size: 24px;
     margin-bottom: 20px;
     width: 33%;
 }
-
 
 .contact-innner {
     padding-bottom: 100px;
